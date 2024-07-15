@@ -15,8 +15,6 @@ orgs.newOrg('eclipse-dataspace-cap') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "CAP project website",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
   ],
