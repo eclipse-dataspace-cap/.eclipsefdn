@@ -17,5 +17,12 @@ orgs.newOrg('eclipse-dataspace-cap') {
       description: "CAP project website",
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('cap-ontology') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Conformity Assessment Ontology",
+      web_commit_signoff_required: true,
+    }
   ],
 }
