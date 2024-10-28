@@ -15,7 +15,16 @@ orgs.newOrg('eclipse-dataspace-cap') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "CAP project website",
+      gh_pages_build_type: "workflow",
       web_commit_signoff_required: false,
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main",
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
     },
     orgs.newRepo('cap-ontology') {
       allow_merge_commit: true,
