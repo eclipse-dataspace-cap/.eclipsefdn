@@ -10,13 +10,14 @@ orgs.newOrg('eclipse-dataspace-cap') {
     },
   },
   _repositories+:: [
-    orgs.newRepo('cap-website') {
+    orgs.newRepo('eclipse-dataspace-cap.github.io') {
+      aliases: ['cap-website'],
       allow_merge_commit: true,
       allow_update_branch: false,
-      delete_branch_on_merge: false,
-      description: "CAP project website",
-      gh_pages_build_type: "workflow",
+      delete_branch_on_merge: true,
+      description: "Conformity Assessment Policy and Credential Profile website",
       web_commit_signoff_required: false,
+      gh_pages_build_type: "workflow",
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
