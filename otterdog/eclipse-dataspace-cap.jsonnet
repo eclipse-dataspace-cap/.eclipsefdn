@@ -31,8 +31,17 @@ orgs.newOrg('eclipse-dataspace-cap') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
-      description: "Conformity Assessment Ontology",
+      description: "Conformity Assessment Policy and Credential Profile - Ontology",
       web_commit_signoff_required: true,
+      gh_pages_build_type: "workflow",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main",
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
     }
   ],
 }
