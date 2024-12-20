@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-dataspace-cap') {
+orgs.newOrg('technology.dataspace-cap', 'eclipse-dataspace-cap') {
   settings+: {
     description: "",
     name: "Eclipse Conformity Assessment Policy and Credential Profile ",
